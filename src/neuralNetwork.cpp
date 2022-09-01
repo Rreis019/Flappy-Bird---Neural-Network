@@ -147,6 +147,37 @@ NetBot NetBot::mutate(NetBot n1)
     return children;
 }
 
+
+void NetBot::save(char* fileName)
+{
+    FILE* fp = fopen(fileName,"w");
+
+    for(int i  = 0;i < weights.size();i++)
+    {
+        for(int j = 0;j < weights[i].size();j++)
+        {
+            fprintf(fp,"%lf ",weights[i][j]);
+        }
+    }
+    fclose(fp);
+}
+
+bool NetBot::load(char* fileName)
+{
+    FILE* fp = fopen(fileName,"r");
+    if(fp == NULL){return false;}
+
+    for(int i  = 0;i < weights.size();i++)
+    {
+        for(int j = 0;j < weights[i].size();j++)
+        {
+            fscanf(fp,"%lf ",&weights[i][j]);
+        }
+    }
+    fclose(fp);
+    return true;
+}
+
 void NetBot::print()
 {
     printf("Neurons:\n");

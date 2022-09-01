@@ -5,8 +5,8 @@
 
 <h2>Preview</h2>
 <p float="left">
-  <img width="300" src="FlappyAI.png"> 
-  <img width="300" src="FlappyAI2.png">
+  <img width="400" src="FlappyAI.png"> 
+  <img width="400" src="FlappyAI2.png">
 </p>
 
 <h2>Neural Network Structure</h2>

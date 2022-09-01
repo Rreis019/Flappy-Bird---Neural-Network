@@ -13,8 +13,8 @@ class NetBot
         static NetBot mutate(NetBot n1,NetBot n2);
         static NetBot mutate(NetBot n1);
         void print();
-        static NetBot save(char* fileName){}
-        static NetBot load(char* fileName){} 
+        void save(char* fileName);
+        bool load(char* fileName); 
     public:
         double fitness;
         std::vector<Layer> neurons;
